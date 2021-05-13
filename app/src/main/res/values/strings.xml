@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DetailActivity</string>
+    <string name="send_to_an_account">Envio a una cuenta o celular</string>
+    <string name="send">enviar</string>
+    <string name="todo">TODO</string>
+    <string name="resume">Resumen</string>
+    <string name="from_which_account_do_you_send">Desde que cuenta envías</string>
+    <string name="baz">BAZ</string>
+    <string name="edit">editar</string>
+    <string name="number">******554</string>
+    <string name="who_are_you_sending">A quién envías</string>
+    <string name="abbreviations">AA</string>
+    <string name="name">Angel Acosta Dominguez</string>
+    <string name="detail_transaction">Banco Azteca **254</string>
+    <string name="how_much_to_send">Cuanto quieres enviar</string>
+    <string name="amount">$ 600</string>
+    <string name="transaction">Envío a Banco Azteca</string>
+    <string name="concept">Concepto</string>
+    <string name="frequent_transaction">Guardar como operación frecuente</string>
+    <string name="shipment_information">Cuáles son los datos del envío</string>
+</resources>

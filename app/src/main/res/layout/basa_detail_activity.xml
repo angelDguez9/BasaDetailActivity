@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".BASADetailActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="220dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_firts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/Tv_resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/resume"
+                android:textColor="@color/secundary"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+            <TextView
+                android:id="@+id/Tv_from_wich_account_you_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/from_which_account_do_you_send"
+                android:textColor="@color/secundary"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Tv_resume" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Iv_credit_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/basa_ic_credit_card"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_from_wich_account_you_send" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Tv_personal_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/baz"
+                        android:textColorHint="@color/secundary"
+                        android:textColor="@color/secundary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/Iv_credit_card"
+                        app:layout_constraintTop_toBottomOf="@+id/Tv_from_wich_account_you_send" />
+
+                    <TextView
+                        android:id="@+id/Tv_credit_card_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/number"
+                        app:layout_constraintStart_toEndOf="@+id/Iv_credit_card"
+                        app:layout_constraintTop_toBottomOf="@+id/Tv_personal_account" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/V_firts"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="#AFACAC"
+            app:layout_constraintBottom_toTopOf="@+id/linear_layout_second"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_firts" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/V_firts">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Tv_who_are_you_sending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/who_are_you_sending"
+                    android:textColor="@color/secundary"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_credit_card_detail" />
+
+                <TextView
+                    android:id="@+id/Tv_edit_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="183dp"
+                    android:layout_marginTop="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/edit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/tertiary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/Tv_who_are_you_sending" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Tv_abbreviation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/abbreviations"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/Tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:autofillHints=""
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:hint="@string/name"
+                    android:textColorHint="@color/secundary"
+                    android:inputType="text"
+                    android:textColor="@color/secundary"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/Et_detail_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:hint="@string/detail_transaction"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_name" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/V_second"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="#AFACAC"
+            app:layout_constraintBottom_toTopOf="@+id/linear_layout_third"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_second" />
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/V_second">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Tv_how_much_to_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/how_much_to_send"
+                    android:textColor="@color/secundary"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Et_detail_transaction" />
+
+                <TextView
+                    android:id="@+id/Tv_edit_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="125dp"
+                    android:layout_marginTop="24dp"
+                    android:clickable="true"
+                    android:text="@string/edit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/tertiary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/Tv_how_much_to_send"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/Iv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/basa_ic_send"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_how_much_to_send"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:id="@+id/Et_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:hint="@string/amount"
+                    android:textColor="@color/secundary"
+                    android:textSize="18sp"
+                    android:textColorHint="@color/secundary"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:background="@android:color/transparent"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/Iv_send"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_how_much_to_send"
+                    android:autofillHints="" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/V_third"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
+            android:background="#AFACAC"
+            app:layout_constraintBottom_toTopOf="@+id/linear_layout_fourth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_third" />
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_fourth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/V_third">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Tv_shipment_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/shipment_information"
+                    android:textColor="@color/secundary"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Et_amount" />
+
+                <TextView
+                    android:id="@+id/Tv_edit_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="24dp"
+                    android:clickable="true"
+                    android:text="@string/edit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/tertiary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/Tv_shipment_information"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/Iv_concept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/basa_ic_concep"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_shipment_information"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/TV_concept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/concept"
+                    app:layout_constraintStart_toEndOf="@+id/Iv_concept"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_shipment_information" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/Et_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/transaction"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/secundary"
+                    android:textColorHint="@color/secundary"
+                    app:layout_constraintStart_toEndOf="@+id/Iv_concept"
+                    app:layout_constraintTop_toBottomOf="@+id/TV_concept"
+                    android:autofillHints="" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_fifth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_fourth">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#E8E4E4"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/Iv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/basa_ic_add"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/Tv_frequent_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/frequent_transaction"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/Iv_add" />
+
+                <ImageView
+                    android:id="@+id/Iv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/basa_ic_info"
+                    app:layout_constraintTop_toBottomOf="@+id/Tv_frequent_transaction"
+                    android:contentDescription="@string/todo" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Btn_send"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/basa_custom_button"
+                android:text="@string/send"
+                android:textAllCaps="true"
+                android:textColor="@color/secundary"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
